@@ -1,0 +1,75 @@
+/* ins&rez blabka */
+/* respecte le position > taille > style */
+body {
+}
+
+#centre_page {
+
+
+}
+
+.page_container {
+    display: flex ;
+}
+
+
+/* Bandeau supérieur */
+    #bande_haut {
+
+        min-height: 15% ;
+        max-height: 15% ;
+        min-width: 100% ;
+
+        border-bottom-style: ridge;
+        border-color: black;
+        border-radius: 5px ;
+
+        color: darkred;
+
+    }
+
+/* colonne accès rapides */
+    #colonne_acces_rapides {
+
+        margin: 10px 1px ;
+        width: 15% ;
+
+        border-style: solid;
+        border-color: crimson ;
+        border-radius: 8px ;
+
+        color: lightgray;
+
+    }
+
+    #liste_acces_rapides {
+
+
+    }
+
+    .icones_acces_rapides {
+
+
+    }
+
+/* Corps */
+    #corps {
+        position: relative ;
+        margin: 10px 10px ;
+        width: 82% ;
+
+        border-style: solid;
+
+        padding-left: 10px ;
+
+        color: whitesmoke;
+    }
+
+    #date_petit {
+
+    }
+
+    #rss {
+
+
+    }

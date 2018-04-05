@@ -1,0 +1,840 @@
+/* ins&rez blabka */
+
+/* respecte le position > taille > style */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    font-family: 'Product Sans';
+    font-size: 1.6em;
+}
+
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #FFF100;
+
+}
+
+#bande_couleurs_haut {
+
+    width: 100%;
+    max-height: 10px;
+    min-height: 10px;
+
+    font-size: 0.1em;
+
+    display: flex;
+}
+
+.couleur_jaune {
+    width: 20%;
+    background-color: #FFF100;
+    color: #FFF100;
+}
+
+.couleur_orange {
+    width: 20%;
+    background-color: #ff8100;
+    color: #ff8100;
+}
+
+.couleur_rose {
+    width: 20%;
+    background-color: #EC008B;
+    color: #EC008B;
+}
+
+.couleur_bleu {
+    width: 20%;
+    background-color: #00ADEF;
+    color: #00ADEF;
+}
+
+.couleur_vert {
+    width: 20%;
+    background-color: #49ff00;
+    color: #49ff00;
+}
+
+.couleur_noir {
+    width: 30%;
+    background-color: #0E1025;
+    color: #0E1025;
+}
+
+
+.bandeau_separation {
+    font-size: 0.18em;
+    display: flex;
+}
+
+.bande_couleurs_separation {
+    width: 40%;
+    display: flex;
+}
+
+.span_centre {
+    align-content: center;
+}
+
+#menu {
+    top: 0px;
+    padding-right: 3%;
+    /*ça marche pour bloquer le menu mais ça plante les REFs
+    position: sticky;
+    z-index: 20;
+    */
+    background-color: #0E1025;
+    background-image: url(../images_et_icones/decors2.gif);
+    background-size: cover;
+    background-repeat: repeat;
+
+    text-align: center;
+    vertical-align: middle;
+    color: whitesmoke;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.container {
+    width: 100%;
+}
+
+
+#menu_fixe {
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    background: -webkit-linear-gradient(rgba(14, 16, 37, 1), rgba(0, 173, 239, 0));
+    /*Safari 5.1-6*/
+    background: -o-linear-gradient(rgba(14, 16, 37, 1), rgba(0, 173, 239, 0));
+    /*Opera 11.1-12*/
+    background: -moz-linear-gradient(rgba(14, 16, 37, 1), rgba(0, 173, 239, 0));
+    /*Fx 3.6-15*/
+    background: linear-gradient(rgba(14, 16, 37, 1), rgba(0, 173, 239, 0.2));
+    /*Standard*/
+    border-radius: 35%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+
+    font-size: 0em;
+    text-align: center;
+    /* Safari */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#menu_fixe a {
+    margin: 0% 1%;
+    color: whitesmoke;
+}
+
+
+#menu_fixe_presentation {
+    margin-right: 1%;
+}
+
+#menu_fixe_presentation:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+#menu_fixe_parcours {
+    margin-right: 1%;
+}
+
+#menu_fixe_parcours:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+#menu_fixe_animations {
+
+    margin-right: 5%;
+}
+
+#menu_fixe_animations:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+#menu_fixe_logo {
+    max-height: 0em;
+}
+
+
+#menu_fixe_billetterie {
+    margin-left: 5%;
+}
+
+#menu_fixe_billetterie:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+#menu_fixe_organisation {
+
+    margin-left: 1%;
+}
+
+#menu_fixe_organisation:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+#menu_fixe_contact {
+    margin-left: 1%;
+}
+
+#menu_fixe_contact:hover a {
+    font-weight: 600;
+    border-style: hidden;
+}
+
+
+#menu a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#LightUpCity_petit {
+    text-align: center;
+    padding-left: 0%;
+    font-size: 0.6em;
+}
+
+
+#presentation {
+
+    margin-right: 3%;
+}
+
+#presentation:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: deepskyblue;
+}
+
+#parcours {
+
+    margin-right: 3%;
+}
+
+#parcours:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: greenyellow;
+}
+
+#animations {
+
+    margin-right: 3%;
+}
+
+#animations:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: deepskyblue;
+}
+
+#logo img {
+    height: 9em;
+    width: 8.2em;
+    vertical-align: middle;
+}
+
+
+#billetterie {
+
+    margin-left: 3%;
+}
+
+#billetterie:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: deepskyblue;
+}
+
+#organisation {
+
+    margin-left: 3%;
+}
+
+#organisation:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: greenyellow;
+}
+
+#contact {
+
+    margin-left: 3%;
+}
+
+#contact:hover a {
+    border-bottom-style: solid;
+    border-color: #EC008B;
+    border-bottom-width: 3px;
+    color: deepskyblue;
+}
+
+#facebook {
+    margin-left: 3%;
+
+    font-weight: bold;
+    border: solid;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-color: #EC008B;
+}
+
+#facebook a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#facebook:hover {
+    border-color: #00ADEF;
+}
+
+#date {
+    text-align: center;
+    background-color: #0E1025;
+
+    font-size: 1.3em;
+    font-weight: 600;
+    color: whitesmoke;
+
+
+}
+
+#bandeau_presentation {
+    height: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 4%;
+    display: inline-flex;
+
+    background-color: #0E1025;
+}
+
+
+#texte_presentation {
+    margin: 0% 0% 4% 0%;
+    padding: 0% 5% 0% 5%;
+    text-align: left;
+    text-align: justify;
+    color: whitesmoke;
+}
+
+#media_presentation {
+    margin: 2% auto;
+    color: whitesmoke;
+    /* POUR LE IFRAME CHANGE LA HAUTEUR ICI */
+    height: 24em;
+    width: 50%;
+    position: relative;
+
+}
+
+#media_presentation iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bandeau_parcours {
+    height: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+
+    background-color: #00ADEF;
+}
+
+
+
+#texte_parcours {
+    margin: 5% 25% 5% 5%;
+    padding: 0% 5%;
+    width: 85%;
+    text-align: right;
+    text-align: justify;
+    vertical-align: middle;
+    color: blanchedalmond;
+
+}
+
+
+#media_parcours {
+    margin: 10% 15% 10% 0%;
+    width: 35%;
+    height: 35;
+    text-align: center;
+    vertical-align: middle;
+
+    border-style: solid;
+    border-color: #00ADEF;
+    border-width: 3px;
+    color: whitesmoke;
+
+
+}
+
+#media_parcours img {
+    height: 80%;
+    width: 100%;
+}
+
+
+#bandeau_animations {
+    height: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    align-content: center;
+    color: whitesmoke;
+    background-color: #0E1025;
+}
+
+#bandeau_animations p {
+    margin-bottom: 0%;
+    padding: 2% 0% 5% 0%;
+}
+
+#texte_animations {
+    align-content: center;
+    width: 100%;
+}
+
+#anims_photos_filtres_textes {
+
+    width: 90%;
+    margin: auto;
+}
+
+#images_animations {
+    margin: 1% auto 3% auto;
+    width: 50%;
+    align-content: center;
+    padding: 0%;
+}
+
+
+#image_animations table {
+    margin: 0%;
+    padding: 0%;
+}
+
+.table-responsive {}
+
+/* DEBUT NOM ANIMS */
+
+/* pour faire apparaitre le nom des anims quand on passe
+sur l'image correrspondante */
+
+.table-responsive p {
+    visibility: visible;
+}
+
+#scenes_img:hover {
+    visibility: hidden;
+
+}
+
+/* FIN NOM ANIMS */
+
+#images_animations img {
+    height: 16em;
+    width: 23em;
+    margin: 0% 0% 5% 0%;
+}
+
+/*
+ * ==== hexagon
+ */
+
+.hexa,
+.hexa div {
+    margin: 0;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 25em;
+    height: 16m;
+}
+
+.hexa {
+    width: 18em;
+    height: 14em;
+}
+
+.hexa div {
+    width: 100%;
+    height: 100%;
+}
+
+.hexa {
+    transform: rotate(120deg);
+}
+
+.hex1 {
+    transform: rotate(-60deg);
+}
+
+.hex2 {
+    transform: rotate(-60deg);
+}
+
+/* FIN HEXAHON */
+
+#bandeau_artistes {
+    text-align: center;
+    padding: 2% 0%;
+    background-color: #EC008B;
+}
+
+#bandeau_artistes h3 {
+    padding-bottom: 1%;
+}
+
+#media_artistes {
+    background-color: #0E1025;
+}
+
+#media_artistes img {
+    width: 100%;
+    background-color: #0E1025;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.left {
+    margin-left: 2%;
+}
+
+.left hover {
+    background-color: ;
+}
+
+
+.right {
+    margin-right: 2%;
+}
+
+.right hover {
+    background-color: ;
+}
+
+.description_artistes {
+    position: absolute;
+    font-size: 0em;
+    color: whitesmoke;
+    text-overflow: visible;
+    top: 8%;
+    left: 5%;
+    right: 5%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#bandeau_organisation {
+    margin-top: 0px;
+    padding: 3% 15% 1% 35%;
+    background-color: #0E1025;
+    color: whitesmoke;
+
+}
+
+#bandeau_organisation h3 {
+    text-align: right;
+    margin-bottom: 5%;
+
+}
+
+.bandeau_noir_separation .couleur_noir {
+    width: 100%;
+    font-size: 1em;
+
+}
+
+
+#bandeau_contacts {
+    margin-top: 0px;
+    padding: 6% 7% 3% 7%;
+    background-color: #EC008B;
+    background-image: url(../images_et_icones/decors2.gif);
+    background-size: 140%;
+    background-repeat: repeat-y;
+
+    color: whitesmoke;
+}
+
+#texte_contacts {
+    padding-top: 2%;
+    text-align: center;
+    font-family: 'Product Sans';
+    padding-right: 7%;
+}
+
+#contact_fb_logo {
+    margin: auto;
+    height: 40%;
+    width: 40%;
+}
+
+textarea::-webkit-input-placeholder {
+    color: ghostwhite!important;
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: ghostwhite !important;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: ghostwhite !important;
+}
+
+textarea:-ms-input-placeholder {
+    color: ghostwhite !important;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+    color: ghostwhite !important;
+}
+
+input[type="email"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: ghostwhite !important;
+}
+
+input[type="email"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: ghostwhite !important;
+}
+
+input[type="email"]:-ms-input-placeholder {
+    color: ghostwhite !important;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    color: ghostwhite !important;
+}
+
+input[type="text"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: ghostwhite !important;
+}
+
+input[type="text"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: ghostwhite !important;
+}
+
+input[type="text"]:-ms-input-placeholder {
+    color: ghostwhite !important;
+}
+
+#bandeau_contacts form {
+    padding-top: 2%;
+}
+
+#bandeau_contacts input {
+    margin-bottom: 2%;
+    color: whitesmoke;
+    background-color: #0E1025;
+    border-color: #0E1025;
+}
+
+#bandeau_contacts textarea {
+    color: whitesmoke;
+    background-color: #0E1025;
+    border-color: #0E1025;
+}
+
+#bandeau_contacts select {
+    color: whitesmoke;
+    margin-bottom: 2%;
+    width: 100%;
+    padding-left: 1%;
+    background-color: #0E1025;
+    border-color: #0E1025;
+    border-radius: 5px;
+}
+
+#contact-introduction {
+    text-align: center;
+}
+
+#contact_aide {
+    color: purple;
+}
+
+
+#bandeau_team {
+    margin-top: 0px;
+    padding: 3% 15% 1% 15%;
+    background-color: #00ADEF;
+
+}
+
+#bandeau_team h3 {
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+#media_team {
+    align-content: center;
+    text-align: center;
+}
+
+.nom_team {
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+
+.photo_team {
+    height: 25%;
+    width: 25%;
+    margin-bottom: 5%;
+    border-top: solid;
+    border-color: darkorchid;
+    border-width: medium;
+}
+
+#bandeau_partenaire {
+    margin-top: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-left: auto;
+    padding: 1% 10% 0% 15%;
+    background-color: #0E1025;
+    /*background-image: url(../images_et_icones/decors1.gif);*/
+    background-size: cover;
+    background-repeat: repeat-x;
+
+}
+
+#texte_partenaire h3 {
+    text-align: right;
+}
+
+.flex-column {}
+
+.logo_partenaire img {
+    height: 8em;
+    width: 10.5em;
+    margin: 2% 5%;
+    padding: 1.5%;
+
+    border-style: ;
+    border-color: #0E1025;
+    border-width: 3px;
+}
+
+#logo_bde {
+    width: 11em;
+}
+
+#logo_utc {
+    width: 12em;
+}
+
+#logo_mairie {
+    width: 6.5em;
+}
+
+#logo_pae {
+    width: 14.5em;
+}
+
+#logo_soge {
+    width: 10em;
+}
+
+#logo_hauts_de_france {
+    width: 9em;
+}
+
+#logo_crous {
+    width: 8em;
+}
+
+#logo_oise {
+    width: 8em;
+}
+
+.bandeau_noir_bas .couleur_noir {
+    font-size: 2em;
+    width: 100%;
+    background-color: #0E1025;
+    color: #0E1025;
+}
+
+
+/* Tooltip container */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

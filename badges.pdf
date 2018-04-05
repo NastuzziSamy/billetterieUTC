@@ -1,0 +1,30 @@
+<?php
+include("../db.php");
+$reponse = $db->query('SELECT * from badges limit 1');
+require('./fpdf/src/fpdf/FPDF.php');
+$pdf = new \fpdf\FPDF('P','mm',array(74,105));
+						    	while ($donnees = $reponse->fetch()){
+										$pdf->AddPage();
+										$pdf->Image('badge-03.png', 0, 0, 74,105);
+										$pdf->SetFont('Arial','B',20);
+										$pdf->SetTextColor(255, 255, 255);
+										$pdf->Image('photos/'.$donnees['photo'].'.png', 18, 8, 38.5, 38.5);
+										/*$pdf->Cell(0,57);*/
+										$pdf->Cell(10,70);
+										$pdf->Cell(20, 10, utf8_decode($donnees['lastname']), 0, 1, 'C');
+										/*$pdf->Text(20,57 , );*/
+										$pdf->Text(20, 64,$donnees['firstname'] );
+										$pdf->SetFont('Arial','B',12);
+										if($donnees['resp']==1){$pdf->SetFont('Arial','B',12);$pdf->Text(26, 77,"Responsable"); if($donnees['post']=="Communication") $pdf->Text(24, 82,$donnees['post'] );
+										else if($donnees['post']=="Programmation") $pdf->Text(24, 82,$donnees['post'] );
+										else $pdf->Text(28, 82,$donnees['post'] );}
+
+										else {if($donnees['post']=="Communication") $pdf->Text(24, 82,$donnees['post'] ); else{$pdf->SetFont('Arial','B',12);  $pdf->Text(28, 77,$donnees['post'] );}}
+										// $pdf->Text(150, 150,"coucou");
+										$pdf->SetFont('Arial','B',17);
+										$pdf->Text(35, 97,$donnees['access'] );
+
+										}
+										$pdf->Output("badges.pdf",'I');
+						    			echo "fin";?>
+						    		<!-- participantspayants.login $pdf->Text(28, 77,$donnees['post'] );-->
